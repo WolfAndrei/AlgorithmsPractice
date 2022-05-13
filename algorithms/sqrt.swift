@@ -8,7 +8,7 @@
 import Foundation
 
 func mySqrt(_ x: Int) -> Int {
-	guard x >= 0 else { fatalError("Negative integer has no integer square root") }
+	guard x > 0 else { fatalError("Negative integer has no integer square root") }
 	var r = x
 	while r * r > x {
 		r = (r + x / r) / 2 // Herons' formula

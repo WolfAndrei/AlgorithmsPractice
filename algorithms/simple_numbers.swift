@@ -27,6 +27,6 @@ func sieve(n: Int) -> [Int] {
 
 func testSimpleNumbers() {
 	example(of: "Simple Numbers") {
-		print(sieve(n: 25))
+		print(sieve(n: 7))
 	}
 }
