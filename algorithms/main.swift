@@ -43,7 +43,7 @@ let dict = [
 	"f": ["e", "c", "d"],
 ]
 
-print(paint(dict: dict))
+//print(paint(dict: dict))
 
 struct Point {
 	var x: Double
@@ -126,39 +126,234 @@ func possibleIntersectionPoint(a: Point, b: Point, c: Point, d: Point) -> Point?
 print(possibleIntersectionPoint(a: .init(4, 4), b: .init(1, 1), c: .init(1, 3), d: .init(5, 1)))
 
 
-let freeTree = ["c": ["a", "d", "f"], "b": ["a", "g"], "f": ["e"]]
+let freeTree = [
+	"a": ["c", "b"],
+	"b": ["a", "g"],
+	"c": ["a", "d", "f"],
+	"d": ["c"],
+	"e": ["f"],
+	"f": ["e"],
+	"g": ["b"]
+]
 
-makeRootedTree(from: freeTree, root: "c")
+print(makeRootedTree(from: freeTree, root: "c"))
 
 func makeRootedTree(from freeTree: [String : [String]], root: String) -> String {
 	var freeTree = freeTree
-	var rootedTree = ""
+	var string = ""
+	var currentV = root
+	var array = [root]
+	var i = 0
+	while !freeTree.isEmpty {
+		if string.last != " " { string += " " }
+		string += currentV
+		let children = freeTree[currentV]?.filter { !array.contains($0) } ?? []
+		array.append(contentsOf: children)
+		if children.isEmpty { string += "; "}
+		for i in 0..<children.count {
+			string += " -> \(children[i]),"
+			if i == children.count - 1 {
+				string.removeLast()
+				string += ";"
+			}
+		}
+		freeTree[currentV] = nil
+		i += 1
+		if i >= array.count { break }
+		currentV = array[i]
+	}
+	string = string.trimmingCharacters(in: .whitespaces)
+	string.removeLast()
+	string += "."
+	return string
+}
+
+
+protocol PriorityQueueProtocol {
+	func max() -> Int?
+	func removeMax() -> Int?
+	func add(el: Int)
+}
+
+class PriorityQueueUnsortedArray: PriorityQueueProtocol {
+	private var array = [Int]()
+	init (_ arrayLiteral: [Int]) {
+		array = arrayLiteral
+	}
 	
-	let rootElementDescendents = freeTree[root] ?? []
-	//	rootedTree.append("\(root) \()")
+	func max() -> Int? {
+		guard !array.isEmpty else { return nil }
+		var max = Int.min
+		for i in 0..<array.count {
+			if array[i] > max {
+				max = array[i]
+			}
+		}
+		return max
+	}
 	
+	func removeMax() -> Int? {
+		guard !array.isEmpty else { return nil }
+		var indexMax = 0
+		for i in 0..<array.count {
+			if array[i] >= array[indexMax] {
+				indexMax = i
+			}
+		}
+		return array.remove(at: indexMax)
+	}
 	
+	func add(el: Int) {
+		array.append(el)
+	}
+}
+
+
+class PriorityQueueSortedArray: PriorityQueueProtocol {
+	private var array = [Int]()
+	init (_ arrayLiteral: [Int]) {
+		array = arrayLiteral
+	}
 	
+	func max() -> Int? {
+		return array.last
+	}
 	
-	for rootElementDescendent in rootElementDescendents {
-		if let desc = freeTree[rootElementDescendent] {
-			break
-		} else {
-			for value in freeTree {
-				guard value.key != root,
-							value.value.contains(rootElementDescendent),
-							let index = value.value.firstIndex(of: rootElementDescendent),
-							let el = freeTree[value.key]?.remove(at: index) else { continue }
-				if freeTree[el] != nil {
-					freeTree[el]?.append(value.key)
-				} else {
-					freeTree[el] = [value.key]
-				}
+	func removeMax() -> Int? {
+		guard !array.isEmpty else { return nil }
+		return array.remove(at: array.count - 1)
+	}
+	
+	func add(el: Int) {
+		for i in 0..<array.count {
+			if el > array[i] {
+				continue
+			} else {
+				array.insert(el, at: i)
+				break
 			}
 		}
 	}
-	
-	print(freeTree)
-	
-	return ""
 }
+
+class Node: CustomStringConvertible {
+	
+	var description: String {
+		return "(val: \(value), lc: \(leftChild?.description ?? "nil"), rc: \(rightChild?.description ?? "nil"))"
+	}
+	
+	var value: Int
+	weak var parent: Node?
+	var leftChild: Node?
+	var rightChild: Node?
+	
+	init(value: Int, lc: Node?, rc: Node?) {
+		self.value = value
+		leftChild = lc
+		rightChild = rc
+	}
+	
+	var isLeaf: Bool {
+		get {
+			return leftChild == nil && rightChild == nil
+		}
+	}
+}
+
+
+class BST: CustomStringConvertible {
+	var description: String {
+		return root?.description ?? "nil"
+	}
+	
+	var root: Node?
+	
+	init(root: Node?) {
+		self.root = root
+	}
+	
+	func max() -> Node? {
+		guard let root = root else { return nil }
+		var max = root
+		while max.rightChild != nil {
+			guard let rc = max.rightChild,
+						rc.value > max.value else { break }
+			max = rc
+		}
+		return max
+	}
+	
+	func add(node: Node) {
+		guard let root = root else {
+			self.root = node
+			return
+		}
+		var parent = root
+		while true {
+			if parent.value > node.value {
+				if let newPar = parent.leftChild {
+					parent = newPar
+				} else {
+					break
+				}
+			} else {
+				if let newPar = parent.rightChild {
+					parent = newPar
+				} else {
+					break
+				}
+			}
+		}
+		if parent.value > node.value {
+			parent.leftChild = node
+			node.parent = parent
+		} else {
+			parent.rightChild = node
+			node.parent = parent
+		}
+	}
+	
+	
+	
+	func removeMax() {
+		guard let max = max() else { return }
+		if max.parent != nil {
+			max.parent?.rightChild = max.leftChild
+			max.leftChild?.parent = max.parent?.rightChild
+		} else {
+			root = max.leftChild
+			root?.parent = nil
+		}
+	}
+}
+
+
+let node2 = Node(value: 5, lc: nil, rc: nil)
+let node3 = Node(value: 6, lc: nil, rc: nil)
+let node4 = Node(value: 3, lc: nil, rc: nil)
+let node1 = Node(value: 4, lc: nil, rc: nil)
+
+let bst = BST(root: nil)
+
+bst.add(node: node3)
+bst.add(node: node1)
+bst.add(node: node2)
+bst.add(node: node4)
+
+print(bst.description)
+bst.removeMax()
+print(bst.description)
+print(bst.max()?.value)
+bst.removeMax()
+print(bst.description)
+bst.removeMax()
+print(bst.description)
+bst.removeMax()
+print(bst.description)
+
+let operators: Set<String> = ["+", "-", "/", "*", "(", ")"]
+let openBracket = "("
+let closeBracket = ")"
+
+let equation = "(16+19)/5-94*(1/2)"
+calculateEquation(infix: equation)

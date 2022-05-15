@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0008E87E2831664500199EF2 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008E87D2831664500199EF2 /* Calculator.swift */; };
 		007BED75282BD8910022E643 /* MinDiffArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BED74282BD8910022E643 /* MinDiffArray.swift */; };
 		007BED77282BDB4E0022E643 /* Pi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BED76282BDB4E0022E643 /* Pi.swift */; };
 		007DFD332827B74500E0C15C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007DFD322827B74500E0C15C /* main.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0008E87D2831664500199EF2 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
 		007BED74282BD8910022E643 /* MinDiffArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinDiffArray.swift; sourceTree = "<group>"; };
 		007BED76282BDB4E0022E643 /* Pi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pi.swift; sourceTree = "<group>"; };
 		007DFD2F2827B74500E0C15C /* algorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algorithms; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				007DFD322827B74500E0C15C /* main.swift */,
+				0008E87D2831664500199EF2 /* Calculator.swift */,
 				00818A7428282F16003F469C /* TwoSum.swift */,
 				007DFD392827BA4500E0C15C /* gcd.swift */,
 				00818A722827F96E003F469C /* simple_numbers.swift */,
@@ -165,6 +168,7 @@
 				007DFD3C2827BA6300E0C15C /* Helper.swift in Sources */,
 				00D356A6282950B5006F8CD2 /* Quickselect.swift in Sources */,
 				00818A732827F96E003F469C /* simple_numbers.swift in Sources */,
+				0008E87E2831664500199EF2 /* Calculator.swift in Sources */,
 				00818A712827F8E3003F469C /* sqrt.swift in Sources */,
 				00818A7728282F2A003F469C /* ThreeSum.swift in Sources */,
 				00D356A42829507A006F8CD2 /* QuadraticEquation.swift in Sources */,
