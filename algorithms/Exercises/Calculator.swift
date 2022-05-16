@@ -102,6 +102,9 @@ func createPostfixArray(infixString: String) -> [String] {
 		}
 	}
 	
+	if !tempChar.isEmpty {
+		array.append(tempChar)
+	}
 	while !operatorsStack.isEmpty {
 		if let op = operatorsStack.pop()?.sign {
 			array.append(op)
@@ -134,7 +137,7 @@ func calculateEquation(infix: String) -> Double? {
 
 func testCalculator() {
 	example(of: "Calculator") {
-		let equation = "(16+19)/5-94*(1/2)"
+		let equation = "(16+19)/5-94*1/2"
 		print(calculateEquation(infix: equation))
 	}
 }
