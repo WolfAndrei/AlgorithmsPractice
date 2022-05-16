@@ -8,13 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		0008E87E2831664500199EF2 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0008E87D2831664500199EF2 /* Calculator.swift */; };
+		0021F22428324B0C007675B8 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0021F22328324B0C007675B8 /* Stack.swift */; };
+		0021F22728324B2C007675B8 /* BST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0021F22628324B2C007675B8 /* BST.swift */; };
+		0021F22928324B4D007675B8 /* Node.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0021F22828324B4D007675B8 /* Node.swift */; };
+		0021F22B28324C51007675B8 /* PriorityQueueUnsortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0021F22A28324C51007675B8 /* PriorityQueueUnsortedArray.swift */; };
+		0021F22D28324C59007675B8 /* PriorityQueueSortedArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0021F22C28324C59007675B8 /* PriorityQueueSortedArray.swift */; };
+		0021F22F28324C9B007675B8 /* PriorityQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0021F22E28324C9B007675B8 /* PriorityQueue.swift */; };
+		0021F23228324CFB007675B8 /* PointsOnCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0021F23128324CFB007675B8 /* PointsOnCircle.swift */; };
+		0021F23428324D22007675B8 /* Line Intersection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0021F23328324D22007675B8 /* Line Intersection.swift */; };
+		0021F23728324DC8007675B8 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0021F23628324DC8007675B8 /* String+Extension.swift */; };
+		0021F23A28324EF4007675B8 /* Free Tree to Rooted.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0021F23928324EF4007675B8 /* Free Tree to Rooted.swift */; };
+		0021F23C28324F3D007675B8 /* PaintTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0021F23B28324F3D007675B8 /* PaintTask.swift */; };
+		0021F23E28324FEC007675B8 /* CountSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0021F23D28324FEC007675B8 /* CountSort.swift */; };
+		0021F24028325000007675B8 /* FindSubstring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0021F23F28325000007675B8 /* FindSubstring.swift */; };
 		007BED75282BD8910022E643 /* MinDiffArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BED74282BD8910022E643 /* MinDiffArray.swift */; };
 		007BED77282BDB4E0022E643 /* Pi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007BED76282BDB4E0022E643 /* Pi.swift */; };
 		007DFD332827B74500E0C15C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007DFD322827B74500E0C15C /* main.swift */; };
 		007DFD3A2827BA4500E0C15C /* gcd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007DFD392827BA4500E0C15C /* gcd.swift */; };
 		007DFD3C2827BA6300E0C15C /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007DFD3B2827BA6300E0C15C /* Helper.swift */; };
 		00818A712827F8E3003F469C /* sqrt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00818A702827F8E3003F469C /* sqrt.swift */; };
-		00818A732827F96E003F469C /* simple_numbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00818A722827F96E003F469C /* simple_numbers.swift */; };
+		00818A732827F96E003F469C /* SimpleNumbers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00818A722827F96E003F469C /* SimpleNumbers.swift */; };
 		00818A7528282F16003F469C /* TwoSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00818A7428282F16003F469C /* TwoSum.swift */; };
 		00818A7728282F2A003F469C /* ThreeSum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00818A7628282F2A003F469C /* ThreeSum.swift */; };
 		008BCEAA282A9722009CF7DB /* PropertyWrappers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008BCEA9282A9722009CF7DB /* PropertyWrappers.swift */; };
@@ -37,6 +50,19 @@
 
 /* Begin PBXFileReference section */
 		0008E87D2831664500199EF2 /* Calculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		0021F22328324B0C007675B8 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		0021F22628324B2C007675B8 /* BST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BST.swift; sourceTree = "<group>"; };
+		0021F22828324B4D007675B8 /* Node.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Node.swift; sourceTree = "<group>"; };
+		0021F22A28324C51007675B8 /* PriorityQueueUnsortedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueueUnsortedArray.swift; sourceTree = "<group>"; };
+		0021F22C28324C59007675B8 /* PriorityQueueSortedArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueueSortedArray.swift; sourceTree = "<group>"; };
+		0021F22E28324C9B007675B8 /* PriorityQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriorityQueue.swift; sourceTree = "<group>"; };
+		0021F23128324CFB007675B8 /* PointsOnCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsOnCircle.swift; sourceTree = "<group>"; };
+		0021F23328324D22007675B8 /* Line Intersection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Line Intersection.swift"; sourceTree = "<group>"; };
+		0021F23628324DC8007675B8 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		0021F23928324EF4007675B8 /* Free Tree to Rooted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Free Tree to Rooted.swift"; sourceTree = "<group>"; };
+		0021F23B28324F3D007675B8 /* PaintTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintTask.swift; sourceTree = "<group>"; };
+		0021F23D28324FEC007675B8 /* CountSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountSort.swift; sourceTree = "<group>"; };
+		0021F23F28325000007675B8 /* FindSubstring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSubstring.swift; sourceTree = "<group>"; };
 		007BED74282BD8910022E643 /* MinDiffArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinDiffArray.swift; sourceTree = "<group>"; };
 		007BED76282BDB4E0022E643 /* Pi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pi.swift; sourceTree = "<group>"; };
 		007DFD2F2827B74500E0C15C /* algorithms */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = algorithms; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,7 +70,7 @@
 		007DFD392827BA4500E0C15C /* gcd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gcd.swift; sourceTree = "<group>"; };
 		007DFD3B2827BA6300E0C15C /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		00818A702827F8E3003F469C /* sqrt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sqrt.swift; sourceTree = "<group>"; };
-		00818A722827F96E003F469C /* simple_numbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simple_numbers.swift; sourceTree = "<group>"; };
+		00818A722827F96E003F469C /* SimpleNumbers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleNumbers.swift; sourceTree = "<group>"; };
 		00818A7428282F16003F469C /* TwoSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoSum.swift; sourceTree = "<group>"; };
 		00818A7628282F2A003F469C /* ThreeSum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeSum.swift; sourceTree = "<group>"; };
 		008BCEA9282A9722009CF7DB /* PropertyWrappers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWrappers.swift; sourceTree = "<group>"; };
@@ -64,6 +90,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0021F22528324B1E007675B8 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				0021F22328324B0C007675B8 /* Stack.swift */,
+				0021F22628324B2C007675B8 /* BST.swift */,
+				0021F22828324B4D007675B8 /* Node.swift */,
+				0021F22A28324C51007675B8 /* PriorityQueueUnsortedArray.swift */,
+				0021F22C28324C59007675B8 /* PriorityQueueSortedArray.swift */,
+				0021F22E28324C9B007675B8 /* PriorityQueue.swift */,
+			);
+			path = Structures;
+			sourceTree = "<group>";
+		};
+		0021F23028324CE4007675B8 /* Exercises */ = {
+			isa = PBXGroup;
+			children = (
+				007DFD392827BA4500E0C15C /* gcd.swift */,
+				007BED76282BDB4E0022E643 /* Pi.swift */,
+				007BED74282BD8910022E643 /* MinDiffArray.swift */,
+				00D356A128295055006F8CD2 /* ConverterFromDecimal.swift */,
+				00818A722827F96E003F469C /* SimpleNumbers.swift */,
+				00D356A5282950B5006F8CD2 /* Quickselect.swift */,
+				00D356A32829507A006F8CD2 /* QuadraticEquation.swift */,
+				0008E87D2831664500199EF2 /* Calculator.swift */,
+				0021F23128324CFB007675B8 /* PointsOnCircle.swift */,
+				0021F23328324D22007675B8 /* Line Intersection.swift */,
+				0021F23928324EF4007675B8 /* Free Tree to Rooted.swift */,
+				0021F23B28324F3D007675B8 /* PaintTask.swift */,
+				0021F23D28324FEC007675B8 /* CountSort.swift */,
+				0021F23F28325000007675B8 /* FindSubstring.swift */,
+			);
+			path = Exercises;
+			sourceTree = "<group>";
+		};
+		0021F23528324DB6007675B8 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				00818A702827F8E3003F469C /* sqrt.swift */,
+				007DFD3B2827BA6300E0C15C /* Helper.swift */,
+				0021F23628324DC8007675B8 /* String+Extension.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		0021F24128325014007675B8 /* LeetCode */ = {
+			isa = PBXGroup;
+			children = (
+				00818A7428282F16003F469C /* TwoSum.swift */,
+				00818A7628282F2A003F469C /* ThreeSum.swift */,
+			);
+			path = LeetCode;
+			sourceTree = "<group>";
+		};
 		007DFD262827B74500E0C15C = {
 			isa = PBXGroup;
 			children = (
@@ -83,19 +162,11 @@
 		007DFD312827B74500E0C15C /* algorithms */ = {
 			isa = PBXGroup;
 			children = (
+				0021F24128325014007675B8 /* LeetCode */,
+				0021F23528324DB6007675B8 /* Util */,
+				0021F23028324CE4007675B8 /* Exercises */,
+				0021F22528324B1E007675B8 /* Structures */,
 				007DFD322827B74500E0C15C /* main.swift */,
-				0008E87D2831664500199EF2 /* Calculator.swift */,
-				00818A7428282F16003F469C /* TwoSum.swift */,
-				007DFD392827BA4500E0C15C /* gcd.swift */,
-				00818A722827F96E003F469C /* simple_numbers.swift */,
-				00D356A5282950B5006F8CD2 /* Quickselect.swift */,
-				00D356A32829507A006F8CD2 /* QuadraticEquation.swift */,
-				007DFD3B2827BA6300E0C15C /* Helper.swift */,
-				00818A702827F8E3003F469C /* sqrt.swift */,
-				007BED74282BD8910022E643 /* MinDiffArray.swift */,
-				00818A7628282F2A003F469C /* ThreeSum.swift */,
-				00D356A128295055006F8CD2 /* ConverterFromDecimal.swift */,
-				007BED76282BDB4E0022E643 /* Pi.swift */,
 				008BCEA9282A9722009CF7DB /* PropertyWrappers.swift */,
 			);
 			path = algorithms;
@@ -159,7 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0021F22B28324C51007675B8 /* PriorityQueueUnsortedArray.swift in Sources */,
 				00D356A228295055006F8CD2 /* ConverterFromDecimal.swift in Sources */,
+				0021F22428324B0C007675B8 /* Stack.swift in Sources */,
 				007BED75282BD8910022E643 /* MinDiffArray.swift in Sources */,
 				007DFD3A2827BA4500E0C15C /* gcd.swift in Sources */,
 				007DFD332827B74500E0C15C /* main.swift in Sources */,
@@ -167,11 +240,22 @@
 				007BED77282BDB4E0022E643 /* Pi.swift in Sources */,
 				007DFD3C2827BA6300E0C15C /* Helper.swift in Sources */,
 				00D356A6282950B5006F8CD2 /* Quickselect.swift in Sources */,
-				00818A732827F96E003F469C /* simple_numbers.swift in Sources */,
+				00818A732827F96E003F469C /* SimpleNumbers.swift in Sources */,
+				0021F22D28324C59007675B8 /* PriorityQueueSortedArray.swift in Sources */,
+				0021F23728324DC8007675B8 /* String+Extension.swift in Sources */,
+				0021F22928324B4D007675B8 /* Node.swift in Sources */,
 				0008E87E2831664500199EF2 /* Calculator.swift in Sources */,
+				0021F23228324CFB007675B8 /* PointsOnCircle.swift in Sources */,
+				0021F23428324D22007675B8 /* Line Intersection.swift in Sources */,
 				00818A712827F8E3003F469C /* sqrt.swift in Sources */,
 				00818A7728282F2A003F469C /* ThreeSum.swift in Sources */,
+				0021F22728324B2C007675B8 /* BST.swift in Sources */,
+				0021F24028325000007675B8 /* FindSubstring.swift in Sources */,
+				0021F23C28324F3D007675B8 /* PaintTask.swift in Sources */,
+				0021F23E28324FEC007675B8 /* CountSort.swift in Sources */,
+				0021F22F28324C9B007675B8 /* PriorityQueue.swift in Sources */,
 				00D356A42829507A006F8CD2 /* QuadraticEquation.swift in Sources */,
+				0021F23A28324EF4007675B8 /* Free Tree to Rooted.swift in Sources */,
 				008BCEAA282A9722009CF7DB /* PropertyWrappers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
